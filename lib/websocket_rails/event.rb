@@ -87,7 +87,7 @@ module WebsocketRails
     end
 
     def serialize
-    [
+     p [
         encoded_name,
         {
           :id => id,
