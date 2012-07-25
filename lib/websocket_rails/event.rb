@@ -87,6 +87,17 @@ module WebsocketRails
     end
 
     def serialize
+    [
+        encoded_name,
+        {
+          :id => id,
+          :channel => channel,
+          :data => data,
+          :success => success,
+          :result => result
+        }
+      ].to_s
+      
       [
         encoded_name,
         {
